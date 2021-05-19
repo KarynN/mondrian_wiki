@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta author='Karyn Nakamura'>
+	<title>Piet Mondrian Wiki</title>
+	<meta name="viewport" content="initial-scale=1" /> 
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+	<style type="text/css">
+		
+body {
+	margin: 0;
+	padding: 0;
+  overflow: hidden;
+	}
+
+div {
+  background-color: white;
+  border: 1.2vw solid black;
+}
+
+.one {
+    width: 35.5vw;
+    height: 20vh;
+    overflow: hidden;
+    position: absolute;
+    margin-left: -1.2vw;
+    margin-top: -1.2vw;
+}
+
+.two {
+    width: 46.8vw;
+    height: 10vh;
+    overflow: hidden;
+    position: absolute;
+    left: 35.7vw;
+    margin-top: -1.2vw;
+}
+
+.three {
+    width: 15vw;
+    height: 80vh;
+    overflow: hidden;
+    position: absolute;
+    left: 83.8vw;
+    margin-top: -1.2vw;
+}
+
+.four {
+    width: 25vw;
+    height: 69vh;
+    overflow: hidden;
+    position: absolute;
+    top: 20.3vh;
+    margin-left: -1.2vw;
+}
+
+.five {
+    width: 9.1vw;
+    height: 39vh;
+    overflow: hidden;
+    position: absolute;
+    top: 20.3vh;
+    left: 25.2vw;
+}
+
+.six {
+    width: 31.5vw;
+    height: 48.9vh;
+    overflow: hidden;
+    position: absolute;
+    top: 10.3vh;
+    left: 35.8vw;
+}
+
+.seven {
+    width: 14vw;
+    height: 48.9vh;
+    overflow: hidden;
+    position: absolute;
+    top: 10.3vh;
+    left: 68.5vw;
+}
+
+.eight {
+    width: 42vw;
+    height: 6.3vh;
+    overflow: hidden;
+    position: absolute;
+    top: 91.5vh;
+    left: -1.2vw;
+}
+
+.nine {
+    width: 15.55vw;
+    height: 27.4vh;
+    overflow: hidden;
+    position: absolute;
+    top: 61.5vh;
+    left: 25.2vw;
+}
+
+.ten {
+    width: 40.2vw;
+    height: 16.4vh;
+    overflow: hidden;
+    position: absolute;
+    top: 61.5vh;
+    left: 42.2vw;
+}
+
+.eleven {
+    width: 27.8vw;
+    height: 18.1vh;
+    overflow: hidden;
+    position: absolute;
+    top: 80.1vh;
+    left: 42.2vw;
+}
+
+.twelve {
+    width: 27.4vw;
+    height: 18.1vh;
+    overflow: hidden;
+    position: absolute;
+    top: 80.2vh;
+    left: 71.4vw;
+}
+
+
+iframe {
+    width: 100% !important;
+    height: 100% !important;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+.blue{
+  background-color: navy;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.yellow{
+  background-color: yellow;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.red{
+  background-color: red;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+ 	</style>
+</head>
+
+<body>
+  <div class='one'>
+    <iframe id = "one" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='one blue'></div>
+  <div class='two'>
+    <iframe id = "two" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='two red'></div>
+  <div class='three'>
+    <iframe id = "three" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='four'>
+    <iframe id = "four" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='five'>
+    <iframe id = "five" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='six'>
+    <iframe id = "six" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='six yellow'></div>
+  <div class='seven'>
+    <iframe id = "seven" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='eight'>
+    <iframe id = "eight" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='eight yellow'></div>
+  <div class='nine'>
+    <iframe id = "nine" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='nine blue'></div>
+  <div class='ten'>
+    <iframe id = "ten" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='ten red'></div>
+  <div class='eleven'>
+    <iframe id = "eleven" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='twelve'>
+    <iframe id = "twelve" src = "mondrianwiki.html" frameborder = 0 ></iframe>
+  </div>
+  <div class='twelve blue'></div>
+
+
+  
+<script type="text/javascript">
+
+var width = window.innerWidth;
+var height = window.innerHeight;
+
+
+/*
+iframe {
+    width: 76.92% !important;
+    height: 76.92% !important;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+
+
+
+*/
+var oneone = document.getElementById('oneone');
+oneone.onload = function () {
+    oneone.contentWindow.scrollTo(0,0);
+}
+var onetwo = document.getElementById('onetwo');
+oneone.onload = function () {
+    onetwo.contentWindow.scrollTo(width/3.99,0);
+}
+var onethree = document.getElementById('onethree');
+onethree.onload = function () {
+    onethree.contentWindow.scrollTo(width/2,0);
+}
+var onefour = document.getElementById('onefour');
+onefour.onload = function () {
+    onefour.contentWindow.scrollTo(width/1.3,0);
+}
+
+var twoone = document.getElementById('twoone');
+twoone.onload = function () {
+    twoone.contentWindow.scrollTo(0,height/4);
+}
+var twotwo = document.getElementById('twotwo');
+twotwo.onload = function () {
+    twotwo.contentWindow.scrollTo(width/3.99,height/4);
+}
+var twothree = document.getElementById('twothree');
+twothree.onload = function () {
+    twothree.contentWindow.scrollTo(width/2,height/4);
+}
+var twofour = document.getElementById('twofour');
+twofour.onload = function () {
+    twofour.contentWindow.scrollTo(width/1.3,height/4);
+}
+
+var threeone = document.getElementById('threeone');
+threeone.onload = function () {
+    threeone.contentWindow.scrollTo(0,height/2);
+}
+var threetwo = document.getElementById('threetwo');
+threetwo.onload = function () {
+    threetwo.contentWindow.scrollTo(width/3.99,height/2);
+}
+var threethree = document.getElementById('threethree');
+threethree.onload = function () {
+    threethree.contentWindow.scrollTo(width/2,height/2);
+}
+var threefour = document.getElementById('threefour');
+threefour.onload = function () {
+    threefour.contentWindow.scrollTo(width/1.3,height/2);
+}
+
+var fourone = document.getElementById('fourone');
+fourone.onload = function () {
+    fourone.contentWindow.scrollTo(0,height/1.334);
+}
+var fourtwo = document.getElementById('fourtwo');
+fourtwo.onload = function () {
+    fourtwo.contentWindow.scrollTo(width/3.99,height/1.334);
+}
+var fourthree = document.getElementById('fourthree');
+fourthree.onload = function () {
+    fourthree.contentWindow.scrollTo(width/2,height/1.334);
+}
+var fourfour = document.getElementById('fourfour');
+fourfour.onload = function () {
+    fourfour.contentWindow.scrollTo(width/1.3,height/1.334);
+}
+
+
+//document.getElementById('div_iframe').scrollTop = 138
+//$('#div_iframe').scrollTop(938)
+</script>
+
+</body>
+</html>
